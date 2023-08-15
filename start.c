@@ -1,4 +1,16 @@
 #include "monty.h"
+
+/**
+ * main - Entry point of the program.
+ * @argc: The number of command line arguments.
+ * @argv: The command line arguments.
+ *
+ * Description: This function reads a file containing Monty byte codes and
+ * executes them. If the file contains an invalid instruction, it prints an
+ * error message and exits.
+ *
+ * Return: 0 on success, EXIT_FAILURE on error.
+ */
 int main(int argc, char *argv[])
 {
 	char *buffer = NULL, *filename = NULL, **lines = NULL, **opcodes = NULL;

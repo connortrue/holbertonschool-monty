@@ -1,3 +1,6 @@
+#ifndef MONTY_H
+#define MONTY_H
+
 #include <unistd.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -39,3 +42,5 @@ void pall(stack_t **stack, unsigned int line_number);
 char *read_file(char *filename);
 void functions(char *array, stack_t **head, unsigned int line);
 char **tokenizer(char *str, char *sep);
+
+#endif
