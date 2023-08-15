@@ -1,3 +1,4 @@
+#include "monty.h"
 void push(stack_t **stack, unsigned int line_number)
 {
     // Get the value to push from the `opcodes` array
