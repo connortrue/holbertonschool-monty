@@ -1,4 +1,11 @@
 #include "monty.h"
+/**
+ * tokenizer - Splits a string into tokens
+ * @str: The string to tokenize
+ * @sep: The separator used to tokenize the string
+ *
+ * Return: Pointer to an array of tokens
+ */
 char **tokenizer(char *str, char *sep)
 {
 	char **tokens = NULL;
@@ -35,7 +42,16 @@ char **tokenizer(char *str, char *sep)
 
 	return (tokens);
 }
-
+/**
+ * functions - Execute the correct function based on the opcode
+ * @array: The array storing the opcode and its arguments
+ * @head: Double pointer to the head of the stack
+ * @line: The line number currently being executed
+ *
+ * Description: It is assumed that the opcodes are correctly implemented.
+ * If an unknown opcode is encountered, the program will print an error message
+ * and exit with status EXIT_FAILURE.
+ */
 void functions(char *array, stack_t **head, unsigned int line)
 {
 	int i = 0;
@@ -59,8 +75,14 @@ void functions(char *array, stack_t **head, unsigned int line)
 		exit(EXIT_FAILURE);
 	}
 }
-
-
+/**
+ * read_file - Reads a file and stores its content in a buffer
+ * @filename: The name of the file to read
+ *
+ * Return: Pointer to a buffer containing the content of the file
+ * If the file cannot be opened or read, or if the buffer cannot be allocated,
+ * the function will print an error message and exit with status EXIT_FAILURE.
+ */
 char *read_file(char *filename)
 {
 	int fd = 0, line = 0;
